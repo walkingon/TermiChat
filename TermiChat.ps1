@@ -91,12 +91,12 @@ function RequestChat {
         $functionArgs = $toolCall.function.arguments | ConvertFrom-Json
         if ($functionName -eq "invoke_expression") {
             $expression = $functionArgs.expression
-            $result = Invoke-Expression $expression
+            $result = Invoke-Expression $expression | Out-String
             AddMessage @{
                 role         = "tool"
                 tool_call_id = $toolCallId
                 name         = $functionName
-                content      = $result.ToString()
+                content      = $result
             }
             RequestChat
         }
