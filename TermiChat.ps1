@@ -12,8 +12,8 @@ if ($null -eq $TermiChatKey) {
     exit 1
 }
 
-# Write-Host "TermiChatHost: $TermiChatHost"
-# Write-Host "TermiChatKey: $TermiChatKey"
+Write-Host "TermiChatHost: $TermiChatHost"
+#Write-Host "TermiChatKey: $TermiChatKey"
 
 # 定义messages列表
 $messages = New-Object System.Collections.ArrayList
@@ -56,7 +56,7 @@ $tools = @(
 )
 
 function WaitForUserInput {
-    $userInput = Read-Host "用户输入"
+    $userInput = Read-Host "你"
     if ($userInput -eq "exit") {
         Write-Host "退出交互模式"
         break
