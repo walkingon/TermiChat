@@ -3,7 +3,7 @@
 运行在终端中的AI聊天助手
 
 ## 环境要求
-1. 安装PowerShell
+1. 安装PowerShell 7+
 2. 配置服务器地址和密钥。
     - 方式一：
         - 编辑config.json文件中"TermiChatHost"和"TermiChatKey"字段。
